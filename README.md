@@ -1,89 +1,102 @@
-# Tunnel Analysis and Exploratory Data Analysis (EDA) with Maven Fuzzy Factory Dataset
+# 📊 Maven Fuzzy Factory: Pazarlama Hunisi ve Veri Analizi Projesi
 
-This project aims to analyze the relationship between advertising strategies and organic traffic using the **Maven Fuzzy Factory** dataset. Through **Exploratory Data Analysis (EDA)** and **Funnel Analysis** conducted in SQL, the effectiveness of digital marketing strategies has been evaluated.
+## 📌 Problem Tanımı
 
----
+Birçok şirket dijital reklamlara ciddi bütçeler ayırmakta, ancak:
 
-## 📌 Project Objective
+- Hangi trafik kaynakları daha verimli?
+- Kullanıcılar hangi adımlarda süreci terk ediyor?
+- Organik trafik mi, yoksa reklamlar mı daha fazla dönüşüm sağlıyor?
 
-The primary goal of this project is to analyze the impact of advertising and organic traffic on sales and identify which traffic sources yield higher conversion rates. Within this scope, two main analyses were performed using the **Maven Fuzzy Factory** dataset:
-
-1. **Exploratory Data Analysis (EDA)**: Understanding the structure of the dataset, extracting basic statistics, and assessing data quality.
-2. **Funnel Analysis**: Examining user behavior on the website to determine conversion rates and identify bottlenecks.
-
----
-
-## 🛠️ Tools and Technologies Used
-
-- **SQL**: Primary tool for data querying, analysis, and reporting.
-- **Maven Fuzzy Factory Dataset**: The main data source used for analysis.
-- **Git**: Used for version control of project files.
+Bu proje, [Maven Fuzzy Factory](https://www.mavenanalytics.io/data-playground) e-ticaret veri seti üzerinden bu sorulara yanıt aramak ve **kullanıcı davranışlarını analiz etmek** amacıyla gerçekleştirilmiştir.
 
 ---
 
-## 📂 Project Files
+## 🧠 Yaklaşımım
 
-The project includes two main SQL files:
+Proje, iki temel analiz adımıyla yapılandırıldı:
 
-1. **EDA.sql**: SQL queries for exploratory data analysis.
-   - Structure and basic statistics of the dataset.
-   - Examination of missing data and outliers.
-   - Analysis of user behavior by traffic sources.
+### 1️⃣ Keşifsel Veri Analizi (EDA)
+- Trafik kaynakları, cihaz türleri ve oturum kalitesi incelendi.
+- `session_id`, `utm_source`, `device` gibi değişkenler temizlenip kategorilere ayrıldı.
 
-2. **Funnel_Analysis.sql**: SQL queries for funnel analysis.
-   - Step-by-step examination of user behavior on the website.
-   - Calculation of conversion rates.
-   - Identification of bottlenecks and improvement suggestions.
-
----
-
-## 📊 Analysis Process
-
-### 1️⃣ Exploratory Data Analysis (EDA)
-- Basic concepts such as **session_id**, **pageview_id**, and **utm_source** were examined.
-- Data was categorized into organic and advertising sources.
-- Analysis of which devices (desktop, mobile, tablet) generated the most traffic.
-
-### 2️⃣ Funnel Analysis
-- User behavior on the website was examined step by step.
-- **Page Activation → Order** conversion rates were calculated.
-- Identification of which ad types (b_ad, g_ad, social) yielded higher conversions.
+### 2️⃣ Huni Analizi (Funnel Analysis)
+- Kullanıcının web sitesindeki yolculuğu adım adım incelendi:  
+  *Giriş → Sayfa Görüntüleme → Sepete Ekleme → Sipariş Verme*
+- Dönüşüm oranları hesaplandı ve **tıkanıklık yaşanan noktalar** tespit edildi.
 
 ---
 
-## 💡 Key Findings
+## 🛠️ Kullanılan Teknolojiler
 
-- **Organic Traffic** generates higher engagement and sales rates compared to paid advertising.
-- Most successful device: **Desktop computers**.
-- **Social media ads** underperformed, while **b_ad** and **g_ad** ads were more effective.
-- The highest **"page activation → order"** conversion rate was achieved through **b_ad** ads.
-
----
-
-## 🚧 Challenges and Solutions
-
-- **Technical Terms**: Understanding concepts like **pageview_id** and **session_id** took time. This challenge was overcome by researching resources and writing sample queries.
-- **Data Categorization**: By learning about **UTM Source**, data was correctly categorized.
+- **SQL** (PostgreSQL dili)  
+- **Git** (versiyon kontrolü için)  
+- **Maven Fuzzy Factory Dataset** (gerçekçi e-ticaret örnek verisi)
 
 ---
 
-## 📣 Contribution
+## 🔍 Analiz Aşamaları
 
-This project is open-source. Feedback, suggestions, and contributions are welcome. Please contribute by submitting a **pull request** or opening an **issue**.
+### 📌 EDA (Keşifsel Veri Analizi)
+- Organik vs. reklam kaynaklı trafik ayrımı
+- Cihaz kırılımı: masaüstü, mobil, tablet
+- Hangi kaynaklar daha çok oturum getiriyor?
 
----
-
-## 🌐 Contact
-
-- **LinkedIn**: ([https://www.linkedin.com/in/yourprofile](https://www.linkedin.com/in/cagan-demir/))
-  
-
----
-
-## 📌 Tags
-
-#DataAnalytics #SQLAnalysis #DigitalMarketing #OrganicTraffic #AdStrategy #MarketingAnalytics #DataScience
+### 📌 Huni Analizi (Funnel Analysis)
+- Sayfa → Sipariş adımları arasında kullanıcı kayıpları
+- Trafik kaynaklarına göre dönüşüm oranları
+- En verimli reklam kampanyalarının tespiti
 
 ---
 
-**Note**: This project was conducted using the Maven Fuzzy Factory dataset. You can access the dataset [here](https://www.mavenanalytics.io/data-playground).
+## 💡 Elde Edilen Bulgular
+
+- **Organik trafik**, en yüksek dönüşüm oranına sahip ve maliyetsiz.
+- **Masaüstü cihazlar**, mobil ve tabletlere göre daha başarılı dönüşümler sağlıyor.
+- **b_ad reklamları** en verimli kaynak; **sosyal medya reklamları** düşük performans gösteriyor.
+- **Sepete ekleme → sipariş** adımında en fazla kullanıcı kaybı yaşanıyor.
+
+---
+
+## 📂 Teslim Edilen Dosyalar
+
+| Dosya Adı | Açıklama |
+|-----------|----------|
+| `EDA.sql` | Trafik analizi, cihaz kırılımı, genel istatistikler |
+| `Funnel_Analysis.sql` | Huni adımları, dönüşüm oranları, kampanya performansları |
+
+> İsteğe bağlı olarak: PDF rapor, görsel grafikler veya Tableau/PBI dashboard eklenebilir.
+
+---
+
+## 🎯 Hedef Kitle
+
+Bu proje aşağıdaki kişiler/kurumlar için faydalıdır:
+
+- **Dijital pazarlama uzmanları** (kampanya ROI hesaplama)
+- **E-ticaret analistleri** (funnel optimizasyonu)
+- **İş karar vericiler** (veriye dayalı yatırım kararları için)
+
+---
+
+## 🔮 Gelecek Geliştirmeler
+
+- Tableau ya da Power BI ile **etkileşimli gösterge paneli (dashboard)** geliştirme  
+- Benzer e-ticaret veri setleri için yeniden kullanılabilir **SQL şablonları**  
+- Yeni vs. geri dönen kullanıcı ayrımı ve coğrafi analiz ekleme  
+
+---
+
+## 📞 İletişim
+
+LinkedIn: [www.linkedin.com/in/cagan-demir]  
+
+
+---
+
+## 🏷️ Etiketler
+
+`#SQL` `#VeriAnalizi` `#HuniAnalizi` `#EDA` `#DijitalPazarlama` `#E-Ticaret`
+
+---
+
