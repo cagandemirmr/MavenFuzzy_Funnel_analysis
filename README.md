@@ -5,6 +5,8 @@
 
 Bu proje, e-ticaret web sitesinin trafik kaynakları ve kullanıcı davranışları üzerinden pazarlama kampanyalarının verimliliğini ölçmek ve dönüşüm hunisindeki sorunlu noktaları belirlemek amacıyla yapılmıştır.
 
+Projenin Kısa Anlatımı için: [https://youtu.be/y-w-eNpjIV8]
+
 --- 
 
 ## 🎯 Hedef Kitle
